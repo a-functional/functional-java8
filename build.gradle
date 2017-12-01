@@ -1,0 +1,20 @@
+group 'functional-java8'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+
+repositories {
+    maven {
+        url 'http://www.nexus.ford.com/repository/external-proxy-group/'
+    }
+}
+
+dependencies {
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.8.RELEASE'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+}
