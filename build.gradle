@@ -8,9 +8,7 @@ sourceCompatibility = 1.8
 
 
 repositories {
-    maven {
-        url 'http://www.nexus.ford.com/repository/external-proxy-group/'
-    }
+    mavenCentral()
 }
 
 dependencies {
