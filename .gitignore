@@ -17,3 +17,6 @@ examples/build/**
 hs_err_pid*
 
 **/.DS_Store
+
+# keep the gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
