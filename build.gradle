@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '23.5-jre'
     testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.8.RELEASE'
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.8.0'

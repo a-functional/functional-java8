@@ -58,8 +58,9 @@ public class FunctionExamples {
     public static final Predicate<Integer> isOdd = n -> n % 2 != 0;
     /** Partial Predicate with cascading lambda's (Partially Applied Functions)*/
     public static final Function<Integer, Predicate<Integer>> isGreaterThan = pivot -> candidate -> candidate > pivot;
+    public static final Predicate<Integer> isGreaterThan50PartiallyApplied = isGreaterThan.apply(50);
 
-    public static final Supplier<List<Integer>> testNumbers = () -> Arrays.asList(1, 10, 37, 56, 40);
+    public static final Supplier<List<Integer>> testNumbers = () -> Arrays.asList(37, 10, 1, 56, 40);
     public static final Consumer<String> printMessage = s -> System.out.println(s);
     public static final BiConsumer<String, Integer> biPrintMessage = (s, n) -> System.out.println(s + " : " + n);
 
