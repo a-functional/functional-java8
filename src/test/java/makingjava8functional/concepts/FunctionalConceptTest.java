@@ -1,16 +1,16 @@
 package makingjava8functional.concepts;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static makingjava8functional.concepts.FunctionalConcept.square;
 import static makingjava8functional.concepts.FunctionalConcept.squareAndSum;
 import static makingjava8functional.concepts.FunctionalConcept.sum;
 import static org.assertj.core.api.Assertions.*;
 
-public class FunctionalConceptTest {
+class FunctionalConceptTest {
 
     @Test
-    public void sum() throws Exception {
+    void sum() {
         assertThat(sum.apply(2, 2)).isEqualTo(4);
         assertThat(sum.apply(3,7)).isEqualTo(10);
         assertThat(sum.apply(5,10)).isEqualTo(15);
@@ -18,7 +18,7 @@ public class FunctionalConceptTest {
     }
 
     @Test
-    public void square() throws Exception {
+    void square() {
         assertThat(square.apply(2)).isEqualTo(4);
         assertThat(square.apply(10)).isEqualTo(100);
         assertThat(square.apply(5)).isEqualTo(25);
@@ -26,7 +26,7 @@ public class FunctionalConceptTest {
     }
 
     @Test
-    public void squareAndSum() throws Exception {
+    void squareAndSum() {
         assertThat(squareAndSum.apply(1,1)).isEqualTo(2);
         assertThat(squareAndSum.apply(2,2)).isEqualTo(8);
         assertThat(squareAndSum.apply(3,3)).isEqualTo(18);

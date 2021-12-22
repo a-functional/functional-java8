@@ -1,21 +1,21 @@
 package makingjava8functional;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-public class EmailValidationImperativeTest {
+class EmailValidationImperativeTest {
 
     private EmailValidationImperative emailValidationImperative;
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeEach
+    void setUp() {
         emailValidationImperative = new EmailValidationImperative();
     }
 
     @Test
-    @Ignore
-    public void testMail() throws Exception {
+    @Disabled
+    public void testMail() {
         emailValidationImperative.testMail("");
         emailValidationImperative.testMail(null);
         emailValidationImperative.testMail("a@z.com");

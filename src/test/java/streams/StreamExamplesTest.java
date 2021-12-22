@@ -7,12 +7,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class StreamExamplesTest {
+class StreamExamplesTest {
 
     @Test
-    public void chaining() {
+    void chaining() {
         List<Integer> integers = StreamExamples.INTS.get();
 
         List<String> actual = integers.stream()
@@ -25,7 +25,7 @@ public class StreamExamplesTest {
     }
 
     @Test
-    public void mapToHashMap1() {
+    void mapToHashMap1() {
         Map<Integer, String> actual = StreamExamples.HOSTINGS.get()
                 .stream()
                 .collect(toMap(StreamExamples.Hosting::getId, StreamExamples.Hosting::getName));
@@ -34,7 +34,7 @@ public class StreamExamplesTest {
     }
 
     @Test
-    public void mapToHashMap2() {
+    void mapToHashMap2() {
         Map<String, Long> actual = StreamExamples.HOSTINGS.get()
                 .stream()
                 .collect(toMap(StreamExamples.Hosting::getName, StreamExamples.Hosting::getWebsites));

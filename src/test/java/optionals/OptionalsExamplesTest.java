@@ -2,12 +2,12 @@ package optionals;
 
 import java.time.Instant;
 import java.util.Optional;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class OptionalsExamplesTest {
+class OptionalsExamplesTest {
 
     @Test
-    public void test1() {
+    void test1() {
         Optional<Long> maybe;
         String result;
 
@@ -25,7 +25,7 @@ public class OptionalsExamplesTest {
     }
 
     @Test
-    public void test2() {
+    void test2() {
         Optional<Long> maybe;
         String result;
 
@@ -48,7 +48,7 @@ public class OptionalsExamplesTest {
     }
 
     @Test
-    public void test3() {
+    void test3() {
         Optional<Long> maybe;
         String result;
 

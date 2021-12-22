@@ -20,33 +20,33 @@ import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
-public class FunctionExamplesTest {
+class FunctionExamplesTest {
 
     @Test
-    public void add() {
+    void add() {
         Integer actual = addUsingPartial.apply(1).apply(2);
         assertThat(actual).isEqualTo(3);
     }
 
     @Test
-    public void addUsingBinary() {
+    void addUsingBinary() {
         Integer actual = addUsingBinary.apply(1, 2);
 
         assertThat(actual).isEqualTo(3);
     }
 
     @Test
-    public void multiplyUsingBinary() {
+    void multiplyUsingBinary() {
         Integer actual = multiplyUsingBinary.apply(2, 2);
 
         assertThat(actual).isEqualTo(4);
     }
 
     @Test
-    public void isGreaterThan50_filterPredicate() {
+    void isGreaterThan50_filterPredicate() {
         List<Integer> sampleNumbers = testNumbers.get();
         List<Integer> actual = sampleNumbers.stream()
             .filter(isGreaterThan50)
@@ -57,7 +57,7 @@ public class FunctionExamplesTest {
     }
 
     @Test
-    public void isGreaterThan50_filterPredicate_withCascadingLambdas() {
+    void isGreaterThan50_filterPredicate_withCascadingLambdas() {
         List<Integer> sampleNumbers = testNumbers.get();
         List<Integer> actual = sampleNumbers.stream()
             .filter(isGreaterThan.apply(50))
@@ -68,7 +68,7 @@ public class FunctionExamplesTest {
     }
 
     @Test
-    public void isOdd_filterPredicate() {
+    void isOdd_filterPredicate() {
         List<Integer> sampleNumbers = testNumbers.get();
         List<Integer> actual = sampleNumbers.stream()
             .filter(isOdd)
@@ -80,7 +80,7 @@ public class FunctionExamplesTest {
     }
 
     @Test
-    public void isEqual_filterBiPredicate() {
+    void isEqual_filterBiPredicate() {
         List<Integer> sampleNumbers = testNumbers.get();
         List<Integer> actual = sampleNumbers.stream()
             .filter(n -> isEqual.test(n, 10))
@@ -91,7 +91,7 @@ public class FunctionExamplesTest {
     }
 
     @Test
-    public void isGreaterThan50PartiallyApplied() {
+    void isGreaterThan50PartiallyApplied() {
         assertThat(isGreaterThan50PartiallyApplied.test(50)).isFalse();
         assertThat(isGreaterThan50PartiallyApplied.test(-1)).isFalse();
         assertThat(isGreaterThan50PartiallyApplied.test(51)).isTrue();
@@ -101,38 +101,38 @@ public class FunctionExamplesTest {
     }
 
     @Test
-    public void printMessage() {
+    void printMessage() {
         printMessage.accept("Just do it.");
     }
 
     @Test
-    public void biPrintMessage() {
+    void biPrintMessage() {
         biPrintMessage.accept("The number is", 100);
     }
 
     @Test
-    public void addUsingBiFunction() {
+    void addUsingBiFunction() {
         Integer actual = addUsingBiFunction.apply(100, 200);
 
         assertThat(actual).isEqualTo(300);
     }
 
     @Test
-    public void addUsingBinaryOperator() {
+    void addUsingBinaryOperator() {
         Integer actual = addUsingBinaryOperator.apply(100, 200);
 
         assertThat(actual).isEqualTo(300);
     }
 
     @Test
-    public void squareOperator() {
+    void squareOperator() {
         Double actual = square.apply(5d);
 
         assertThat(actual).isEqualTo(25d);
     }
 
     @Test
-    public void squareUnaryOperator() {
+    void squareUnaryOperator() {
         Double actual = squareUnaryOperator.apply(5d);
 
         assertThat(actual).isEqualTo(25d);

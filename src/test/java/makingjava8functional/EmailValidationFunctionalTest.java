@@ -1,11 +1,11 @@
 package makingjava8functional;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class EmailValidationFunctionalTest {
+class EmailValidationFunctionalTest {
 
     @Test
-    public void validate() throws Exception {
+    void validate() {
         EmailValidationFunctional.validate("this.is@my.email");
         EmailValidationFunctional.validate(null);
         EmailValidationFunctional.validate("");

@@ -1,7 +1,7 @@
 package streams;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class StreamWorkshopTest {
+class StreamWorkshopTest {
 
     /**
      * Create a pipeline of operations:
@@ -19,7 +19,7 @@ public class StreamWorkshopTest {
      * 4. Select only the first three.
      */
     @Test
-    @Ignore
+    @Disabled
     public void filterMapSortAndLimitDishes_as_per_requirements_above() throws Exception {
         List<Dish> dishes = DishHelper.menu.get();
 

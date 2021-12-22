@@ -4,12 +4,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class ImperativeExamplesTest {
+class ImperativeExamplesTest {
 
     @Test
-    public void filterByHighCalorie() {
+    void filterByHighCalorie() {
         List<Dish> dishes = DishHelper.menu.get();
 
         List<String> highCaloricDishes = new ArrayList<>();
@@ -24,7 +24,7 @@ public class ImperativeExamplesTest {
     }
 
     @Test
-    public void mapToDishNames() {
+    void mapToDishNames() {
         List<Dish> dishes = DishHelper.menu.get();
 
         List<String> dishNames = new ArrayList<>();

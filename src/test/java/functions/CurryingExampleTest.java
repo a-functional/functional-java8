@@ -1,15 +1,15 @@
 package functions;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.function.Function;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class CurryingExampleTest {
+class CurryingExampleTest {
 
     @Test
-    public void add4_curried_function() throws Exception {
+    void add4_curried_function() {
         //Just for representation purposes
         Function<Integer, Integer> add4 = CurryingExample.add4;
         Integer actual = add4.apply(4);
@@ -18,7 +18,7 @@ public class CurryingExampleTest {
     }
 
     @Test
-    public void add9_curried_function() throws Exception {
+    void add9_curried_function() {
         Function<Integer, Integer> add9 = CurryingExample.add9;
         Integer actual = add9.apply(9);
 
